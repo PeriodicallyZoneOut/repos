@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Minimalist Calculator</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-white flex items-center justify-center min-h-screen">
+  <div class="w-80 bg-gray-50 rounded-xl shadow-lg p-4">
+    <div class="flex justify-between items-center mb-2">
+      <span class="text-lg font-semibold">Standard</span>
+      <button class="text-gray-400 hover:text-gray-600" title="History">
+        <svg width="20" height="20" fill="none" stroke="currentColor"><path d="M10 2v2m0 12v2m8-8h-2M4 10H2m12.364-5.364l-1.414 1.414M5.05 14.95l-1.414 1.414m12.728 0l-1.414-1.414M5.05 5.05L3.636 6.464" /></svg>
+      </button>
+    </div>
+    <div id="display" class="text-right text-4xl font-mono bg-white rounded mb-2 px-2 py-4 min-h-[48px]">0</div>
+    <div class="grid grid-cols-5 gap-2">
+      <!-- Memory buttons -->
+      <button class="btn-func" data-action="MC">MC</button>
+      <button class="btn-func" data-action="MR">MR</button>
+      <button class="btn-func" data-action="M+">M+</button>
+      <button class="btn-func" data-action="M-">M-</button>
+      <button class="btn-func" data-action="MS">MS</button>
+      <!-- Row 2 -->
+      <button class="btn-func" data-action="%">%</button>
+      <button class="btn-func" data-action="CE">CE</button>
+      <button class="btn-func" data-action="C">C</button>
+      <button class="btn-func" data-action="DEL">
+        <svg class="inline w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 19a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h7l5 5v6l-5 5H6z"/><path d="M9 9l6 6m0-6l-6 6"/></svg>
+      </button>
+      <button class="btn-func" data-action="M-history">M▼</button>
+      <!-- Row 3 -->
+      <button class="btn-func" data-action="1/x">1/x</button>
+      <button class="btn-func" data-action="x^2">x²</button>
+      <button class="btn-func" data-action="sqrt">√x</button>
+      <button class="btn-op" data-action="/">÷</button>
+      <!-- Row 4-7: Numbers and operators -->
+      <button class="btn-num" data-action="7">7</button>
+      <button class="btn-num" data-action="8">8</button>
+      <button class="btn-num" data-action="9">9</button>
+      <button class="btn-op" data-action="*">×</button>
+      <button class="btn-num" data-action="4">4</button>
+      <button class="btn-num" data-action="5">5</button>
+      <button class="btn-num" data-action="6">6</button>
+      <button class="btn-op" data-action="-">−</button>
+      <button class="btn-num" data-action="1">1</button>
+      <button class="btn-num" data-action="2">2</button>
+      <button class="btn-num" data-action="3">3</button>
+      <button class="btn-op" data-action="+">+</button>
+      <button class="btn-func" data-action="+/-">+/-</button>
+      <button class="btn-num" data-action="0">0</button>
+      <button class="btn-num" data-action=".">.</button>
+      <button class="col-span-2 btn-eq" data-action="=">=</button>
+    </div>
+  </div>
+  <script src="js/animation.js"></script>
+  <script>
+    // ...Calculator logic here (see next steps for logic implementation)...
+  </script>
+</body>
+</html>

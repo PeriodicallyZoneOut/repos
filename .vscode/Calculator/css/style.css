@@ -1,0 +1,16 @@
+/* Minimalist calculator custom styles */
+.btn-num, .btn-op, .btn-func, .btn-eq {
+  @apply bg-white border border-gray-200 rounded text-lg font-medium py-2 hover:bg-gray-100 transition;
+}
+.btn-op {
+  @apply text-blue-600;
+}
+.btn-func {
+  @apply text-gray-500;
+}
+.btn-eq {
+  @apply bg-blue-600 text-white col-span-2;
+}
+#display {
+  font-variant-numeric: tabular-nums;
+}

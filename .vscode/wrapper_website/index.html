@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zero-database AI wrapper. Secure client-side chat with LLM7.io API.">
+    <title>AI Wrapper - Secure Client-Side Chat</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-left">
+            <h1 class="logo">🤖 AI Wrapper</h1>
+        </div>
+        <div class="header-right">
+            <button id="settings-toggle" class="settings-button" title="Settings" aria-label="Open Settings">
+                ⚙️
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Chat Container -->
+    <main id="chat-container" class="chat-container">
+        <div id="message-list" class="message-list" role="log" aria-live="polite" aria-label="Chat history"></div>
+    </main>
+
+    <!-- Input Area -->
+    <footer id="input-area" class="input-area">
+        <form id="chat-form" class="chat-form">
+            <div class="input-wrapper">
+                <textarea 
+                    id="prompt-input" 
+                    class="prompt-input" 
+                    placeholder="Type your message here..." 
+                    aria-label="Chat message input"
+                    rows="1"
+                ></textarea>
+                <button type="submit" id="send-button" class="send-button" title="Send message" aria-label="Send message">
+                    ✈️
+                </button>
+            </div>
+            <div class="model-selector-wrapper">
+                <label for="model-select" class="model-label">Model:</label>
+                <select id="model-select" class="model-select" aria-label="Select AI model">
+                    <option value="">Loading models...</option>
+                </select>
+            </div>
+        </form>
+    </footer>
+
+    <!-- Settings Modal -->
+    <div id="api-key-modal" class="modal" role="dialog" aria-labelledby="modal-title" aria-hidden="true">
+        <div class="modal-backdrop"></div>
+        <div class="modal-container">
+            <div class="modal-content">
+                <h2 id="modal-title" class="modal-title">API Key Settings</h2>
+                
+                <div class="modal-body">
+                    <label for="api-key-input" class="api-key-label">LLM7.io API Key:</label>
+                    <input 
+                        type="password" 
+                        id="api-key-input" 
+                        class="api-key-input" 
+                        placeholder="Enter your API key (optional for free models)"
+                        aria-describedby="api-key-note"
+                    >
+                    <p id="api-key-note" class="privacy-note">
+                        ✅ Your key is saved <strong>only</strong> in your browser's localStorage. 
+                        It is never sent to our servers.
+                    </p>
+                </div>
+
+                <div class="modal-actions">
+                    <button id="save-key-button" class="btn btn-primary" type="button">
+                        Save Key
+                    </button>
+                    <button id="clear-key-button" class="btn btn-danger" type="button">
+                        Clear Key
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script type="module" src="js/app.js"></script>
+</body>
+</html>
